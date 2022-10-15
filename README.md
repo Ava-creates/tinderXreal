@@ -1,2 +1,0 @@
-# tinderXreal
-hack harvard project - 
