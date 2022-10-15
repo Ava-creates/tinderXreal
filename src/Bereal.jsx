@@ -1,21 +1,39 @@
 import React from 'react'
 import Webcam from 'webcam-easy';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 export const Bereal = () => {
+    const [canvasVisibility, setCanvasVisibility] = useState('visible');
+    let canvaStyles = {
+        visibility : canvasVisibility
+    }
 
+    const handleClick = () => {
+        console.log("handling click")
+    }
 return (
 <div>
+<div id="camera-1">
 <p>hello world</p>
-<video id="webcam" crossOrigin="anonymous" autoPlay playsInline width="640" height="480"></video>
+<video id="webcam" crossOrigin="anonymous" autoPlay playsInline width="640" height="480" style={canvaStyles}></video>
 <canvas id="canvas" className="d-none"></canvas>
 <audio id="snapSound" crossOrigin="anonymous" src="audio/snap.wav" preload = "auto"></audio>
 <button onClick={StartCamera}>Take a picture</button>
-<button onClick={StopCamera}>Don't Take a picture</button>
+<button onClick={() => setCanvasVisibility('hidden')}>Don't Take a picture</button>
+</div>
+<div id="camera-2">
+<p>hello world</p>
+<video id="webcam2" crossOrigin="anonymous" autoPlay playsInline width="640" height="480" style={canvaStyles}></video>
+<canvas id="canvas2" className="d-none"></canvas>
+<audio id="snapSound2" crossOrigin="anonymous" src="audio/snap.wav" preload = "auto"></audio>
+<button onClick={StartCamera}>Take a picture</button>
+<button onClick={() => setCanvasVisibility('hidden')}>Don't Take a picture</button>
+</div>
 </div>
 )
 
 }
+
 
 function InitializeCamera(videoFrameId, canvasId, audioID, cameraFacing){
     const webcamElement = document.getElementById(videoFrameId);
@@ -30,7 +48,7 @@ function StopCamera(){
 
     console.log("Stopping camera");
 
-    const webcam = InitializeCamera('webcam', 'canvas', 'snapSound', 'user');
+    //const webcam = InitializeCamera('webcam', 'canvas', 'snapSound', 'user');
 
     // use usestate here to set the visibilitty of the video and canvas to hidden
 
@@ -48,6 +66,7 @@ function StopCamera(){
 
 function StartCamera(){
 
+
     console.log("starting camera");
 
     const webcam = InitializeCamera('webcam', 'canvas', 'snapSound', 'user')
@@ -60,6 +79,27 @@ function StartCamera(){
    .catch(err => {
        console.log(err);
    });
+
+
+   const pictureTime = setTimeout(clickPic, 2000);
+
+   function clickPic(){
+    const picture  = webcam.snap();
+    console.log(picture);
+}
+
+
+const frontcam = InitializeCamera('webcam2', 'canvas2', 'snapSound2', 'environment');
+frontcam.start()
+.then(result =>{
+ console.log(result)
+   console.log("webcam started");
+})
+.catch(err => {
+    console.log(err);
+});
+
+
 
 }
 
