@@ -4,21 +4,84 @@ import { useEffect } from 'react';
 
 export const Bereal = () => {
 
+return (
+<div>
+<p>hello world</p>
+<video id="webcam" crossOrigin="anonymous" autoPlay playsInline width="640" height="480"></video>
+<canvas id="canvas" className="d-none"></canvas>
+<audio id="snapSound" crossOrigin="anonymous" src="audio/snap.wav" preload = "auto"></audio>
+<button onClick={StartCamera}>Take a picture</button>
+<button onClick={StopCamera}>Don't Take a picture</button>
+</div>
+)
+
+}
+
+function InitializeCamera(videoFrameId, canvasId, audioID, cameraFacing){
+    const webcamElement = document.getElementById(videoFrameId);
+    const canvasElement = document.getElementById(canvasId);
+    const snapSoundElement = document.getElementById(audioID);
+    const webcam = new Webcam(webcamElement, cameraFacing, canvasElement, snapSoundElement);
+
+    return webcam
+}
+
+function StopCamera(){
+
+    console.log("Stopping camera");
+
+    const webcam = InitializeCamera('webcam', 'canvas', 'snapSound', 'user');
+
+    // use usestate here to set the visibilitty of the video and canvas to hidden
+
+    // display the image in place
+
+    // then instantiate another camera object and now this time create a small canvas
+    // on the top left side
+
+    // change the camera facing side this time.
+
+    // join two images togerther
+
+    // feed to the database
+}
+
+function StartCamera(){
+
+    console.log("starting camera");
+
+    const webcam = InitializeCamera('webcam', 'canvas', 'snapSound', 'user')
+
+    webcam.start()
+   .then(result =>{
+    console.log(result)
+      console.log("webcam started");
+   })
+   .catch(err => {
+       console.log(err);
+   });
+
+}
+
+export const Berealx = () => {
+
   return (
     <div>
     <video id="webcam" crossOrigin="anonymous" autoPlay playsInline width="640" height="480"></video>
     <video id="webcam2" crossOrigin="anonymous" autoPlay playsInline width="640" height="480"></video>
     <canvas id="canvas" className="d-none"></canvas>
+    <canvas id="canvas2" className="d-none"></canvas>
     <audio id="snapSound" crossOrigin="anonymous" src="audio/snap.wav" preload = "auto"></audio>
     <p>Hello World</p>
     <StartCamera></StartCamera>
-    <button onClick={stopCamera}>Stop The Feed</button>
+    <button onClick={stopCamera}>Take a picture</button>
     </div>
   )
 }
 
-function StartCamera(){
+function StartCameraX(){
     console.log("starting camera");
+
 
 
 useEffect(() => {
@@ -44,7 +107,10 @@ function stopCamera(){
 //        console.log(err);
 //    });
 
+const camInfo = console.log(webcam.webcamCount);
 const stopPic = webcam.snap();
+
+const flipagain = webcam.flip()
 
 }
 
@@ -57,7 +123,7 @@ const webcamElement2 = document.getElementById('webcam2');
 const canvasElement = document.getElementById('canvas');
 const canvasElement2 = document.getElementById('canvas2');
 const snapSoundElement = document.getElementById('snapSound');
-const webcam = new Webcam(webcamElement, 'user', canvasElement, snapSoundElement);
+const webcam = new Webcam(webcamElement, 'environment', canvasElement, snapSoundElement);
 const webcam2 = new Webcam(webcamElement2, 'environment', canvasElement2, snapSoundElement);
     webcam.start()
    .then(result =>{
@@ -76,6 +142,16 @@ const webcam2 = new Webcam(webcamElement2, 'environment', canvasElement2, snapSo
    .catch(err => {
        console.log(err);
    });
+   const myTimeout = setTimeout(flipWebcam2, 5000);
 
+   function flipWebcam2(){
+    webcam2.facingMode = 'user';
+    webcam.facingMode = 'user';
+    console.log(webcam2)
+    console.log(webcam)
+    const flipWebcam2 = webcam2.flip();
+}
 
 }
+
+
