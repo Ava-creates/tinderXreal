@@ -1,0 +1,130 @@
+[debug] [2022-10-15T17:45:42.487Z] ----------------------------------------------------------------------
+[debug] [2022-10-15T17:45:42.489Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Ali\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2022-10-15T17:45:42.489Z] CLI Version:   11.14.4
+[debug] [2022-10-15T17:45:42.490Z] Platform:      win32
+[debug] [2022-10-15T17:45:42.490Z] Node Version:  v16.18.0
+[debug] [2022-10-15T17:45:42.499Z] Time:          Sat Oct 15 2022 13:45:42 GMT-0400 (Eastern Daylight Time)
+[debug] [2022-10-15T17:45:42.500Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-10-15T17:45:42.627Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] Failed to authenticate, have you run firebase login?
+[warn] !  emulators: You are not currently authenticated so some features may not work correctly. Please run firebase login to authenticate the CLI. 
+[info] i  emulators: Starting emulators: functions, hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions, hosting"}}
+[debug] [2022-10-15T17:45:42.706Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2022-10-15T17:45:42.707Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2022-10-15T17:45:42.707Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2022-10-15T17:45:42.722Z] [hub] writing locator at C:\Users\Ali\AppData\Local\Temp\hub-tinderxreal.json
+[debug] [2022-10-15T17:45:42.766Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2022-10-15T17:45:42.767Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2022-10-15T17:45:42.767Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, pubsub, storage\u001b[22m"}}
+[info] +  functions: Using node@16 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Using node@16 from host."}}
+[warn] !  functions: You are not signed in to the Firebase CLI. If you have authorized this machine using gcloud application-default credentials those may be discovered and used to access production services. {"metadata":{"emulator":{"name":"functions"},"message":"You are not signed in to the Firebase CLI. If you have authorized this machine using gcloud application-default credentials those may be discovered and used to access production services."}}
+[debug] [2022-10-15T17:45:42.826Z] > refreshing access token with scopes: []
+[debug] [2022-10-15T17:45:42.831Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-10-15T17:45:42.831Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-10-15T17:45:42.949Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2022-10-15T17:45:42.949Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-10-15T17:45:42.950Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/tinderxreal/adminSdkConfig [none]
+[debug] [2022-10-15T17:45:43.102Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/tinderxreal/adminSdkConfig 401
+[debug] [2022-10-15T17:45:43.103Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/tinderxreal/adminSdkConfig {"error":{"code":401,"message":"Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"CREDENTIALS_MISSING","domain":"googleapis.com","metadata":{"service":"firebase.googleapis.com","method":"google.firebase.service.v1beta1.FirebaseProjectService.GetAdminSdkConfig"}}]}}
+[debug] [2022-10-15T17:45:43.104Z] Failed to get Admin SDK config for tinderxreal, falling back to cacheFailed to get Admin SDK for Firebase project tinderxreal. Please make sure the project exists and your account has permission to access it. {"name":"FirebaseError","children":[],"exit":2,"message":"Failed to get Admin SDK for Firebase project tinderxreal. Please make sure the project exists and your account has permission to access it.","original":{"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":401,"message":"Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"CREDENTIALS_MISSING","domain":"googleapis.com","metadata":{"service":"firebase.googleapis.com","method":"google.firebase.service.v1beta1.FirebaseProjectService.GetAdminSdkConfig"}}]}},"response":{"statusCode":401}},"exit":1,"message":"HTTP Error: 401, Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":401},"status":500}
+[warn] !  functions: Unable to fetch project Admin SDK configuration, Admin SDK behavior in Cloud Functions emulator may be incorrect. {"metadata":{"emulator":{"name":"functions"},"message":"Unable to fetch project Admin SDK configuration, Admin SDK behavior in Cloud Functions emulator may be incorrect."}}
+[debug] [2022-10-15T17:45:43.124Z] > refreshing access token with scopes: []
+[debug] [2022-10-15T17:45:43.125Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-10-15T17:45:43.125Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-10-15T17:45:43.202Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2022-10-15T17:45:43.203Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-10-15T17:45:43.203Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/tinderxreal/sites 
+[debug] [2022-10-15T17:45:43.487Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/tinderxreal/sites 401
+[debug] [2022-10-15T17:45:43.488Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/tinderxreal/sites {"error":{"code":401,"message":"Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"CREDENTIALS_MISSING","domain":"googleapis.com","metadata":{"method":"google.firebase.hosting.v1beta1.MetadataService.ListSites","service":"firebasehosting.googleapis.com"}}]}}
+[debug] [2022-10-15T17:45:43.488Z] Failed to list hosting sites
+[debug] HTTP Error: 401, Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2022-10-15T17:45:43.489Z] > refreshing access token with scopes: []
+[debug] [2022-10-15T17:45:43.490Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-10-15T17:45:43.490Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-10-15T17:45:43.580Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2022-10-15T17:45:43.580Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-10-15T17:45:43.580Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/tinderxreal/webApps/-/config [none]
+[debug] [2022-10-15T17:45:43.730Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/tinderxreal/webApps/-/config 401
+[debug] [2022-10-15T17:45:43.730Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/tinderxreal/webApps/-/config {"error":{"code":401,"message":"Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"CREDENTIALS_MISSING","domain":"googleapis.com","metadata":{"service":"firebase.googleapis.com","method":"google.firebase.service.v1beta1.WebAppService.GetWebAppConfig"}}]}}
+[debug] [2022-10-15T17:45:43.730Z] fetchWebSetup error: FirebaseError: HTTP Error: 401, Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[warn] !  hosting: Could not fetch web app configuration and there is no cached configuration on this machine. Check your internet connection and make sure you are authenticated. To continue, you must call firebase.initializeApp({...}) in your code before using Firebase. 
+[debug] [2022-10-15T17:45:43.734Z] > refreshing access token with scopes: []
+[debug] [2022-10-15T17:45:43.735Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-10-15T17:45:43.735Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-10-15T17:45:43.823Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2022-10-15T17:45:43.824Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-10-15T17:45:43.825Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/tinderxreal [none]
+[debug] [2022-10-15T17:45:43.969Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/tinderxreal 401
+[debug] [2022-10-15T17:45:43.969Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/tinderxreal {"error":{"code":401,"message":"Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"CREDENTIALS_MISSING","domain":"googleapis.com","metadata":{"method":"google.firebase.service.v1beta1.FirebaseProjectService.GetFirebaseProject","service":"firebase.googleapis.com"}}]}}
+[debug] [2022-10-15T17:45:43.969Z] HTTP Error: 401, Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[info] i  hosting[tinderxreal]: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
+[info] +  hosting[tinderxreal]: Local server: http://127.0.0.1:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://127.0.0.1:5000\u001b[22m\u001b[24m"}}
+[debug] [2022-10-15T17:45:44.005Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2022-10-15T17:45:44.005Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2022-10-15T17:45:44.005Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\Ali\\.cache\\firebase\\emulators\\ui-v1.11.1\\server\\server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\Ali\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.11.1\\\\server\\\\server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2022-10-15T17:45:44.340Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[debug] [2022-10-15T17:45:44.341Z] Web / API server started at ::1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4000\n"}}
+[info] i  functions: Watching "C:\Users\Ali\Desktop\tinderXreal\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Users\\Ali\\Desktop\\tinderXreal\\functions\" for Cloud Functions..."}}
+[debug] [2022-10-15T17:45:44.553Z] Validating nodejs source
+[debug] [2022-10-15T17:45:46.498Z] checkFunctionsSDKVersion encountered error:Invalid Version:  {}
+[debug] [2022-10-15T17:45:46.499Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.18.2",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^4.0.0-rc.0",
+    "multer": "^1.4.3",
+    "nodemon": "^2.0.13"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-10-15T17:45:46.500Z] Building nodejs source
+[debug] [2022-10-15T17:45:46.500Z] Analyzing nodejs backend spec
+[debug] [2022-10-15T17:45:50.050Z] Could not parse firebase-functions version '' into semver. Falling back to parseTriggers.
+[error] !!  functions: Failed to load function definition from source: FirebaseError: Error parsing triggers: Cannot find module 'firebase-functions'
+Require stack:
+- C:\Users\Ali\Desktop\tinderXreal\functions\index.js
+- C:\Users\Ali\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\functions\runtimes\node\triggerParser.js
+
+Try running "npm install" in your functions directory before deploying. {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: Error parsing triggers: Cannot find module 'firebase-functions'\nRequire stack:\n- C:\\Users\\Ali\\Desktop\\tinderXreal\\functions\\index.js\n- C:\\Users\\Ali\\AppData\\Roaming\\npm\\node_modules\\firebase-tools\\lib\\deploy\\functions\\runtimes\\node\\triggerParser.js\n\nTry running \"npm install\" in your functions directory before deploying."}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Hosting   │ 127.0.0.1:5000 │ n/a                             │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 

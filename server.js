@@ -4,7 +4,7 @@ const { getFirestore, Timestamp, FieldValue, doc, getDoc } = require('firebase-a
 const express = require('express');
 const app = express(); 
 const port = process.env.PORT || 8011;
-
+console.log(port)
 // var firebaseConfig = {
 //   apiKey: process.env.APIKEY,
 //   authDomain: process.env.AUTHDOMAIN,
@@ -15,7 +15,7 @@ const port = process.env.PORT || 8011;
 // }
 
 // Initialize Firebase
-const serviceAccount = require('./tinderxreal-firebase-adminsdk-f02tr-30007d0cbe.json');
+const serviceAccount = require('./tinderxreal-firebase-adminsdk-f02tr-95e223c0a5.json');
 
 initializeApp({
   credential: cert(serviceAccount)
@@ -32,6 +32,10 @@ app.get('/read/:id', async (req, res) => {
     res.send(error);
   }
 });
+
+app.get('/', (req, res)=>{
+  console.log("HGello World");
+})
 
 app.post('/create', async (req, res) => {
   try {
