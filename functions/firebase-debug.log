@@ -1,0 +1,145 @@
+[debug] [2022-10-15T05:28:41.593Z] ----------------------------------------------------------------------
+[debug] [2022-10-15T05:28:41.594Z] Command:       /opt/homebrew/Cellar/node/18.11.0/bin/node /opt/homebrew/bin/firebase serve --only functions,hosting
+[debug] [2022-10-15T05:28:41.594Z] CLI Version:   11.14.4
+[debug] [2022-10-15T05:28:41.594Z] Platform:      darwin
+[debug] [2022-10-15T05:28:41.594Z] Node Version:  v18.11.0
+[debug] [2022-10-15T05:28:41.595Z] Time:          Sat Oct 15 2022 01:28:41 GMT-0400 (Eastern Daylight Time)
+[debug] [2022-10-15T05:28:41.595Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-10-15T05:28:41.633Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-10-15T05:28:41.633Z] > authorizing via signed-in user (sonyahyun.hs@gmail.com)
+[debug] [2022-10-15T05:28:41.633Z] [iam] checking project tinderxreal for permissions ["firebase.projects.get"]
+[debug] [2022-10-15T05:28:41.633Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/tinderxreal:testIamPermissions [none]
+[debug] [2022-10-15T05:28:41.634Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/tinderxreal:testIamPermissions x-goog-quota-user=projects/tinderxreal
+[debug] [2022-10-15T05:28:41.634Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tinderxreal:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-10-15T05:28:41.859Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/tinderxreal:testIamPermissions 200
+[debug] [2022-10-15T05:28:41.859Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/tinderxreal:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-10-15T05:28:41.861Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/tinderxreal [none]
+[debug] [2022-10-15T05:28:42.227Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/tinderxreal 200
+[debug] [2022-10-15T05:28:42.228Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/tinderxreal {"projectId":"tinderxreal","projectNumber":"391617216042","displayName":"tinderXreal","name":"projects/tinderxreal","resources":{"hostingSite":"tinderxreal","storageBucket":"tinderxreal.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_1d54f530-3600-4d34-ac14-2b20acc0a82d"}
+[warn] ⚠  Your requested "node" version "16" doesn't match your global version "18". Using node@18 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Your requested \"node\" version \"16\" doesn't match your global version \"18\". Using node@18 from host."}}
+[debug] [2022-10-15T05:28:42.238Z] defaultcredentials: writing to file /Users/yatunghsieh/.config/firebase/sonyahyun_hs_gmail.com_application_default_credentials.json
+[debug] [2022-10-15T05:28:42.239Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/tinderxreal/sites 
+[debug] [2022-10-15T05:28:42.242Z] Setting GAC to /Users/yatunghsieh/.config/firebase/sonyahyun_hs_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/yatunghsieh/.config/firebase/sonyahyun_hs_gmail.com_application_default_credentials.json"}}
+[debug] [2022-10-15T05:28:42.243Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/tinderxreal/adminSdkConfig [none]
+[debug] [2022-10-15T05:28:42.497Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/tinderxreal/adminSdkConfig 200
+[debug] [2022-10-15T05:28:42.497Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/tinderxreal/adminSdkConfig {"projectId":"tinderxreal","storageBucket":"tinderxreal.appspot.com","locationId":"us-central"}
+[debug] [2022-10-15T05:28:42.611Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/tinderxreal/sites 200
+[debug] [2022-10-15T05:28:42.611Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/tinderxreal/sites {"sites":[{"name":"projects/tinderxreal/sites/tinderxreal","defaultUrl":"https://tinderxreal.web.app","appId":"1:391617216042:web:c842440910b1195b920d53","type":"DEFAULT_SITE"}]}
+[debug] [2022-10-15T05:28:42.612Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/tinderxreal/webApps/1:391617216042:web:c842440910b1195b920d53/config [none]
+[debug] [2022-10-15T05:28:43.044Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/tinderxreal/webApps/1:391617216042:web:c842440910b1195b920d53/config 200
+[debug] [2022-10-15T05:28:43.045Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/tinderxreal/webApps/1:391617216042:web:c842440910b1195b920d53/config {"projectId":"tinderxreal","appId":"1:391617216042:web:c842440910b1195b920d53","storageBucket":"tinderxreal.appspot.com","locationId":"us-central","apiKey":"AIzaSyDPFoMyFYMIdSeOi8GpQkcoK_ooYkUK97w","authDomain":"tinderxreal.firebaseapp.com","messagingSenderId":"391617216042","measurementId":"G-LJW618ENL1"}
+[debug] [2022-10-15T05:28:43.068Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/tinderxreal [none]
+[debug] [2022-10-15T05:28:43.312Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/tinderxreal 200
+[debug] [2022-10-15T05:28:43.312Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/tinderxreal {"projectId":"tinderxreal","projectNumber":"391617216042","displayName":"tinderXreal","name":"projects/tinderxreal","resources":{"hostingSite":"tinderxreal","storageBucket":"tinderxreal.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_1d54f530-3600-4d34-ac14-2b20acc0a82d"}
+[info] i  functions: Watching "/Users/yatunghsieh/Documents/GitHub/tinderXreal/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/yatunghsieh/Documents/GitHub/tinderXreal/functions\" for Cloud Functions..."}}
+[info] i  hosting[tinderxreal]: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
+[info] ✔  hosting[tinderxreal]: Local server: http://localhost:5002 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5002\u001b[22m\u001b[24m"}}
+[debug] [2022-10-15T05:28:43.384Z] Validating nodejs source
+[debug] [2022-10-15T05:28:44.307Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.18.2",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^4.0.0-rc.0",
+    "multer": "^1.4.3",
+    "nodemon": "^2.0.13"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-10-15T05:28:44.307Z] Building nodejs source
+[debug] [2022-10-15T05:28:44.307Z] Analyzing nodejs backend spec
+[debug] [2022-10-15T05:28:44.309Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-10-15T05:28:44.411Z] Serving at port 9005
+
+[debug] [2022-10-15T05:28:44.534Z] Listening on port 9005
+
+[debug] [2022-10-15T05:28:44.536Z] Got response from /__/functions.yaml {"endpoints":{"app":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"app"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-10-15T05:28:44.539Z] shutdown requested via /__/quitquitquit
+
+[info] i  hosting: ::1 - - [15/Oct/2022:05:28:52 +0000] "GET / HTTP/1.1" 200 - "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.6 Safari/605.1.15" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [15/Oct/2022:05:28:52 +0000] \"GET / HTTP/1.1\" 200 - \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.6 Safari/605.1.15\""}}
+[info] i  hosting: ::1 - - [15/Oct/2022:05:28:52 +0000] "GET /__/firebase/init.js?useEmulator=true HTTP/1.1" 200 - "http://localhost:5002/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.6 Safari/605.1.15" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [15/Oct/2022:05:28:52 +0000] \"GET /__/firebase/init.js?useEmulator=true HTTP/1.1\" 200 - \"http://localhost:5002/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.6 Safari/605.1.15\""}}
+[info] ✔  functions: Loaded functions definitions from source: app. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: app."}}
+[info] ✔  functions[us-central1-app]: http function initialized (http://localhost:5001/tinderxreal/us-central1/app). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5001/tinderxreal/us-central1/app)."}}
+[info] i  hosting: ::1 - - [15/Oct/2022:05:28:55 +0000] "GET /__/firebase/init.js?useEmulator=true HTTP/1.1" 200 - "http://localhost:5002/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.6 Safari/605.1.15" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [15/Oct/2022:05:28:55 +0000] \"GET /__/firebase/init.js?useEmulator=true HTTP/1.1\" 200 - \"http://localhost:5002/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.6 Safari/605.1.15\""}}
+[info] [hosting] Rewriting /timestamp to http://localhost:5001/tinderxreal/us-central1/app for local Function us-central1/app
+[debug] [2022-10-15T05:28:56.519Z] >>> [apiv2][query] GET http://localhost:5001/tinderxreal/us-central1/app/timestamp 
+[debug] [2022-10-15T05:28:56.524Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-10-15T05:28:56.524Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-10-15T05:28:56.525Z] Accepted request GET /tinderxreal/us-central1/app/timestamp --> us-central1-app
+[debug] [2022-10-15T05:28:56.530Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-10-15T05:28:56.530Z] [functions] Got req.url=/tinderxreal/us-central1/app/timestamp, mapping to path=/timestamp {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/tinderxreal/us-central1/app/timestamp, mapping to path=/timestamp"}}
+[debug] [2022-10-15T05:28:56.535Z] [worker-pool] addWorker(us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-app)"}}
+[debug] [2022-10-15T05:28:56.535Z] [worker-pool] Adding worker with key us-central1-app, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-app, total=1"}}
+[debug] [2022-10-15T05:28:57.013Z] [runtime-status] [1856] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"/Users/yatunghsieh/Documents/GitHub/tinderXreal/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [1856] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/Users/yatunghsieh/Documents/GitHub/tinderXreal/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-10-15T05:28:57.013Z] [runtime-status] [1856] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.0.0-rc.0","resolution":"/Users/yatunghsieh/Documents/GitHub/tinderXreal/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [1856] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.0.0-rc.0\",\"resolution\":\"/Users/yatunghsieh/Documents/GitHub/tinderXreal/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2022-10-15T05:28:57.013Z] [runtime-status] [1856] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [1856] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2022-10-15T05:28:57.014Z] [runtime-status] [1856] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.0.0-rc.0","resolution":"/Users/yatunghsieh/Documents/GitHub/tinderXreal/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [1856] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.0.0-rc.0\",\"resolution\":\"/Users/yatunghsieh/Documents/GitHub/tinderXreal/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2022-10-15T05:28:57.098Z] [runtime-status] [1856] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [1856] Checked functions.config() {\"config\":{}}"}}
+[debug] [2022-10-15T05:28:57.098Z] [runtime-status] [1856] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.0.0-rc.0","resolution":"/Users/yatunghsieh/Documents/GitHub/tinderXreal/functions/node_modules/firebase-functions/lib/v1/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [1856] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"4.0.0-rc.0\",\"resolution\":\"/Users/yatunghsieh/Documents/GitHub/tinderXreal/functions/node_modules/firebase-functions/lib/v1/index.js\"}}"}}
+[debug] [2022-10-15T05:28:57.098Z] [runtime-status] [1856] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.0.0-rc.0","resolution":"/Users/yatunghsieh/Documents/GitHub/tinderXreal/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [1856] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.0.0-rc.0\",\"resolution\":\"/Users/yatunghsieh/Documents/GitHub/tinderXreal/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2022-10-15T05:28:57.098Z] [runtime-status] [1856] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.3.0","resolution":"/Users/yatunghsieh/Documents/GitHub/tinderXreal/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [1856] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/Users/yatunghsieh/Documents/GitHub/tinderXreal/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-10-15T05:28:57.099Z] [runtime-status] [1856] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.0.0-rc.0","resolution":"/Users/yatunghsieh/Documents/GitHub/tinderXreal/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [1856] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.0.0-rc.0\",\"resolution\":\"/Users/yatunghsieh/Documents/GitHub/tinderXreal/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2022-10-15T05:28:57.099Z] [runtime-status] [1856] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.3.0","resolution":"/Users/yatunghsieh/Documents/GitHub/tinderXreal/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [1856] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.3.0\",\"resolution\":\"/Users/yatunghsieh/Documents/GitHub/tinderXreal/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2022-10-15T05:28:57.156Z] [runtime-status] [1856] Functions runtime initialized. {"cwd":"/Users/yatunghsieh/Documents/GitHub/tinderXreal/functions","node_version":"18.11.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [1856] Functions runtime initialized. {\"cwd\":\"/Users/yatunghsieh/Documents/GitHub/tinderXreal/functions\",\"node_version\":\"18.11.0\"}"}}
+[info] >  Listening on port /var/folders/kn/6zttl4qj42g0lxscpl3795qr0000gn/T/fire_emu_5d897ff1b37c48dd.sock {"user":"Listening on port /var/folders/kn/6zttl4qj42g0lxscpl3795qr0000gn/T/fire_emu_5d897ff1b37c48dd.sock","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"\u001b[90m> \u001b[39m Listening on port /var/folders/kn/6zttl4qj42g0lxscpl3795qr0000gn/T/fire_emu_5d897ff1b37c48dd.sock"}}
+[debug] [2022-10-15T05:28:57.156Z] [runtime-status] [1856] Listening to port: /var/folders/kn/6zttl4qj42g0lxscpl3795qr0000gn/T/fire_emu_5d897ff1b37c48dd.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [1856] Listening to port: /var/folders/kn/6zttl4qj42g0lxscpl3795qr0000gn/T/fire_emu_5d897ff1b37c48dd.sock"}}
+[debug] [2022-10-15T05:28:57.247Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-10-15T05:28:57.247Z] [worker-us-central1-app-b43262f4-1e52-484c-a454-30f0c0ab99b7]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-b43262f4-1e52-484c-a454-30f0c0ab99b7]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-10-15T05:28:57.250Z] [worker-us-central1-app-b43262f4-1e52-484c-a454-30f0c0ab99b7]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-b43262f4-1e52-484c-a454-30f0c0ab99b7]: IDLE"}}
+[debug] [2022-10-15T05:28:57.250Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 1.782875ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 1.782875ms"}}
+[debug] [2022-10-15T05:28:57.251Z] <<< [apiv2][status] GET http://localhost:5001/tinderxreal/us-central1/app/timestamp 200
+[debug] [2022-10-15T05:28:57.251Z] <<< [apiv2][body] GET http://localhost:5001/tinderxreal/us-central1/app/timestamp [stream]
+[info] i  hosting: ::1 - - [15/Oct/2022:05:28:57 +0000] "GET /timestamp HTTP/1.1" 200 13 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.6 Safari/605.1.15" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [15/Oct/2022:05:28:57 +0000] \"GET /timestamp HTTP/1.1\" 200 13 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.6 Safari/605.1.15\""}}
+[info] [hosting] Rewriting /timestamp to http://localhost:5001/tinderxreal/us-central1/app for local Function us-central1/app
+[debug] [2022-10-15T05:29:06.037Z] >>> [apiv2][query] GET http://localhost:5001/tinderxreal/us-central1/app/timestamp 
+[debug] [2022-10-15T05:29:06.041Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-10-15T05:29:06.042Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-10-15T05:29:06.042Z] Accepted request GET /tinderxreal/us-central1/app/timestamp --> us-central1-app
+[debug] [2022-10-15T05:29:06.045Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-10-15T05:29:06.046Z] [functions] Got req.url=/tinderxreal/us-central1/app/timestamp, mapping to path=/timestamp {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/tinderxreal/us-central1/app/timestamp, mapping to path=/timestamp"}}
+[debug] [2022-10-15T05:29:06.046Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-10-15T05:29:06.046Z] [worker-us-central1-app-b43262f4-1e52-484c-a454-30f0c0ab99b7]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-b43262f4-1e52-484c-a454-30f0c0ab99b7]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-10-15T05:29:06.050Z] [worker-us-central1-app-b43262f4-1e52-484c-a454-30f0c0ab99b7]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-b43262f4-1e52-484c-a454-30f0c0ab99b7]: IDLE"}}
+[debug] [2022-10-15T05:29:06.051Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 1.218542ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 1.218542ms"}}
+[debug] [2022-10-15T05:29:06.052Z] <<< [apiv2][status] GET http://localhost:5001/tinderxreal/us-central1/app/timestamp 200
+[debug] [2022-10-15T05:29:06.052Z] <<< [apiv2][body] GET http://localhost:5001/tinderxreal/us-central1/app/timestamp [stream]
+[info] i  hosting: ::1 - - [15/Oct/2022:05:29:06 +0000] "GET /timestamp HTTP/1.1" 200 13 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.6 Safari/605.1.15" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [15/Oct/2022:05:29:06 +0000] \"GET /timestamp HTTP/1.1\" 200 13 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.6 Safari/605.1.15\""}}
+[info] [hosting] Rewriting /timestamp to http://localhost:5001/tinderxreal/us-central1/app for local Function us-central1/app
+[debug] [2022-10-15T05:29:06.702Z] >>> [apiv2][query] GET http://localhost:5001/tinderxreal/us-central1/app/timestamp 
+[debug] [2022-10-15T05:29:06.705Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-10-15T05:29:06.706Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-10-15T05:29:06.706Z] Accepted request GET /tinderxreal/us-central1/app/timestamp --> us-central1-app
+[debug] [2022-10-15T05:29:06.710Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-10-15T05:29:06.710Z] [functions] Got req.url=/tinderxreal/us-central1/app/timestamp, mapping to path=/timestamp {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/tinderxreal/us-central1/app/timestamp, mapping to path=/timestamp"}}
+[debug] [2022-10-15T05:29:06.710Z] [worker-pool] submitRequest(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-app)"}}
+[debug] [2022-10-15T05:29:06.710Z] [worker-us-central1-app-b43262f4-1e52-484c-a454-30f0c0ab99b7]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-b43262f4-1e52-484c-a454-30f0c0ab99b7]: BUSY"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-10-15T05:29:06.713Z] [worker-us-central1-app-b43262f4-1e52-484c-a454-30f0c0ab99b7]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-b43262f4-1e52-484c-a454-30f0c0ab99b7]: IDLE"}}
+[debug] [2022-10-15T05:29:06.713Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] i  functions: Finished "app" in 0.848875ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in 0.848875ms"}}
+[debug] [2022-10-15T05:29:06.714Z] <<< [apiv2][status] GET http://localhost:5001/tinderxreal/us-central1/app/timestamp 200
+[debug] [2022-10-15T05:29:06.714Z] <<< [apiv2][body] GET http://localhost:5001/tinderxreal/us-central1/app/timestamp [stream]
+[info] i  hosting: ::1 - - [15/Oct/2022:05:29:06 +0000] "GET /timestamp HTTP/1.1" 200 13 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.6 Safari/605.1.15" {"metadata":{"emulator":{"name":"hosting"},"message":"::1 - - [15/Oct/2022:05:29:06 +0000] \"GET /timestamp HTTP/1.1\" 200 13 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.6 Safari/605.1.15\""}}
