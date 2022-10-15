@@ -6,75 +6,60 @@ import TinderCard from 'react-tinder-card';
 import Card from "./Card.js";
 import {useRef} from 'react';
 import { useState } from 'react';
+import { Redirect } from "react-router-dom";
+
+import {useNavigate} from "react-router-dom";
+
+
+
 
 import {
   BrowserRouter as Router,
   Switch,
+  Routes,
   Route,
-  Navigate,
   Link
 } from "react-router-dom";
 
 import Matchroom from "./Matchroom.js";
 
+import Login from "./Login.js";
+
+import Signup from "./Signup.js";
+
 
 function App() {
-  const match = true;
-  const onSwipe = (direction) => {
-    console.log('You swiped: ' + direction)
-  }
-  const [lastDirection, setLastDirection] = useState();
 
-  const onSwiped = (direction) => {
-    console.log('removing: ')
-    setLastDirection(direction)
+  const navigate = useNavigate();
 
-    console.log(lastDirection);
+  const navigateToLogin = () => {
     
-  }
+    navigate("/Login", {replace: true});
+  };
 
-var k=1
-
-const onCardLeftScreen = (myIdentifier) => {
-
-  console.log("left the screen");
- 
-}
-
-
-  useEffect  (() =>{
-
-    console.log("dsfds");
-
-    const l= t.current;
-   if (lastDirection==="down")
-   {
-  
-     l.style.visibility = "visible";
-     console.log(l)
+  const navigateToSignup = () => {
     
-   }
-   else
-   {
-     console.log("fuck");
-   }
-  }, []);
+    navigate('/Signup', {replace:true});
+  };
 
-
-  const t = React.createRef()
-
-
-  
 
   return (
     <div className="App">
+
+       
   
         <h1>tinderXreal</h1>
-        <div className="match" ref={t} id="mat">matched wohoo</div>
-          <TinderCard onSwipe={onSwipe} onCardLeftScreen={onCardLeftScreen('fooBar')} id="first"> 
-          <Card></Card>
-          </TinderCard>
-          
+
+        <div className="home">
+          <button onClick={navigateToLogin} > Login</button>
+          <button onClick={navigateToSignup} > Sign up </button>
+
+        <Routes>
+          <Route path="/Login/*" element={<Login />} />
+          <Route path="/Signup/*" element={<Signup />} />
+        </Routes>
+        </div>
+
     </div>
   );
 }
