@@ -1,5 +1,6 @@
 import React from 'react'
 import Webcam from 'webcam-easy';
+import "./bereal.css";
 import { useEffect, useState } from 'react';
 import { useTimer } from 'react-timer-hook';
 import MyTimer from './Timer';
@@ -40,14 +41,15 @@ webcam.stop()
 
 
 export const Bereal = () => {
-    const [canvasVisibility, setCanvasVisibility] = useState('visible');
+    const [canvasVisibility, setCanvasVisibility] = useState('block');
     let canvaStyles = {
-        visibility : canvasVisibility
+        display : canvasVisibility
     }
 
     function callOfExpire(){
         console.log("Your time to bereal is over");
         console.log("Redirecting back to the messages page");
+        setCanvasVisibility("none");
         // <Route path="/redirect" element={ <Navigate to="/error-page" /> } />
     }
 
@@ -55,15 +57,19 @@ export const Bereal = () => {
         console.log("handling click")
     }
 
+    useEffect(() => {
+        StartCamera();
+  });
+
     const time = new Date();
-  time.setSeconds(time.getSeconds() + 10);
+  time.setSeconds(time.getSeconds() + 30);
 return (
 <div>
 <div id="camera-1">
-<p>hello world</p>
+{/* <p>hello world</p> */}
 <MyTimer expiryTimestamp={time} onExpire={callOfExpire}/>
-<video id="webcam" crossOrigin="anonymous" autoPlay playsInline width="640" height="480" style={canvaStyles}></video>
-<canvas id="canvas" className="d-none"></canvas>
+<div id="video"><video id="webcam" crossOrigin="anonymous" autoPlay playsInline width="640" height="480" style={canvaStyles}></video></div>
+<canvas id="canvas" className="d-none" style={canvaStyles}></canvas>
 <audio id="snapSound" crossOrigin="anonymous" src="audio/snap.wav" preload = "auto"></audio>
 <button onClick={StartCamera}>Take a picture</button>
 <button onClick={PostBeReal}>Post BeReal</button>
